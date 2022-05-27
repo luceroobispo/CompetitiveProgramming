@@ -1,1 +1,1 @@
-# CompetitiveProgramming
+# Ejercicios de programación competitiva
