@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int t,n,k;
+    cin>>t;
+    int costo=0;
+    int costo2=0;
+    int arrcosto[t];
+    for(int i=0;i<t;i++){
+        int n, k;
+        cin>>n>>k;
+        int arr[n];
+        for(int j=0;j<n;j++) {
+            cin>>arr[j];
+        }
+        for(int j=0;j<n;j++) {
+            costo+=arr[j];
+        }
+        for(int j=0;j<n;j++) {
+            if(arr[j]>k)arr[j]=k;
+            costo2+=arr[j];
+        }
+        arrcosto[i]=costo-costo2;
+        costo=0;
+        costo2=0;
+    }
+    for(int i=0;i<t;i++){
+        cout<<arrcosto[i]<<endl;
+    }
+
+    return 0;
+}
